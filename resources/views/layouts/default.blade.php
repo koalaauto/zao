@@ -64,7 +64,7 @@
 
             <footer id="footer">
                 © 2016 <a href="{{ URL('/') }}">Zao~ao~ao~ao~ao.com</a>
-                <a href="https://koala.bike" rel="nofollow" target="_blank" class="link">@popfeng</a>
+                <a href="https://koalaauto.com" rel="nofollow" target="_blank" class="link">@KoalaAuto</a>
                 @yield('footer_extra')
             </footer>
         </div>
