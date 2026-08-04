@@ -25,6 +25,11 @@
 <span id="thanks" class="post-about-quote">
     这里是「<a href="{{ URL('about/contribution') }}" target="_blank">贡献记录</a>」和「<a href="{{ URL('about/donation') }}" target="_blank">打赏记录</a>」，谢谢你们 ❤️
 </span>
+<span id="koalaauto" class="post-about-quote">
+    最近在折腾另一件跟车有关的事 ——「<a href="https://koalaauto.com" target="_blank" rel="noopener">KoalaAuto</a>」，
+    把安卓手机的桌面投到车机的 Android Auto 屏幕上，于是车上也能打开手机里的任何一个 App，
+    包括这个站，接着听 Zao~ao~ao~ao~ao~ 🐨
+</span>
 
 @include('layouts.donate')
 
