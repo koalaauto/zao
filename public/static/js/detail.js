@@ -24,6 +24,47 @@ $(function() {
         });
     }
 
+    // 手机端用原生 <audio> 直接放 m3u8 时（安卓尤其如此），播放器请求不带 Referer，
+    // 被七牛防盗链 403。浏览器支持 MSE 时改用 hls.js 加载（会带 Referer），点播放才开始拉分片
+    if (utils.isMobileClient()) {
+        var $programAudios = $('.post-content audio');
+        if ($programAudios.length) {
+            $.ajax({
+                url: '/static/module/hls.js-1.7.3/hls.min.js',
+                dataType: 'script',
+                cache: true
+            }).done(function() {
+                if ( ! window.Hls || ! Hls.isSupported()) {
+                    return;
+                }
+                // iPhone/iPad 原生播放会带 Referer，一直能放，保持原样；安卓虽然也报能放 m3u8，但会 403
+                var probe = $programAudios[0];
+                if ( ! /Android/i.test(navigator.userAgent) && probe.canPlayType('application/vnd.apple.mpegurl')) {
+                    return;
+                }
+                $programAudios.each(function() {
+                    var audio = this;
+                    var $source = $(audio).find('source');
+                    var src = $source.attr('src');
+                    if ( ! src || src.indexOf('.m3u8') === -1) {
+                        return;
+                    }
+                    var hls = new Hls({autoStartLoad: false});
+                    var started = false;
+                    $source.remove();
+                    hls.loadSource(src);
+                    hls.attachMedia(audio);
+                    $(audio).on('play', function() {
+                        if ( ! started) {
+                            started = true;
+                            hls.startLoad(audio.currentTime);
+                        }
+                    });
+                });
+            });
+        }
+    }
+
     // init music player
     if ( ! utils.isMobileClient()) {
         $('.post-music .row').hover(function() {
