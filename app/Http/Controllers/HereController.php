@@ -111,7 +111,10 @@ class HereController extends Controller
     public function edit($id)
     {
         // get current data
-        $data = Here::find($id);
+        $data = $this->findOwned($id);
+        if (empty($data)) {
+            return Redirect::to('/heres');
+        }
 
         // render page
         return View::make('here.edit')->with('data', $data);
@@ -161,6 +164,9 @@ class HereController extends Controller
             'gm_place_id' => $details['place_id']
         ];
         if ( ! empty($params['id'])) {
+            if (empty($this->findOwned($params['id']))) {
+                return Response::json(['status' => 'Not found']);
+            }
             Here::where('id', $params['id'])->update($data);
         } else {
             Here::create($data);
@@ -179,10 +185,27 @@ class HereController extends Controller
     public function destroy($id)
     {
         // delete
-        $status = Here::find($id)->delete();
+        $here = $this->findOwned($id);
+        $status = $here ? $here->delete() : false;
 
         // response
         return Response::json(['status' => $status ? 'OK' : 'ERROR']);
+    }
+
+    /**
+     * 取当前登录用户自己的位置记录
+     *
+     * @param int $id
+     * @return Here|null
+     */
+    private function findOwned($id)
+    {
+        $user = Session::get(self::USER_SESSION_KEY);
+        if (empty($user)) {
+            return null;
+        }
+
+        return Here::email($user['email'])->where('id', $id)->first();
     }
 
     /**

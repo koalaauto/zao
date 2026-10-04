@@ -21,10 +21,6 @@
         <script src="/static/module/AmaranJS/js/jquery.amaran.min.js"></script>
         <script src="/static/js/common.js"></script>
         <script src="/static/js/base.js"></script>
-        <!--[if lt IE 9]>
-            <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-            <script src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTP68EH1Q2"></script>
         <script>

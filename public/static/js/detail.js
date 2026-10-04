@@ -10,6 +10,10 @@ $(function() {
             videoVolume: 'horizontal',
             startVolume: 1,
             flashName: '/static/module/mediaelement-4.2.14/build/mediaelement-flash-video-hls.swf',
+            hls: {
+                path: '/static/module/hls.js-1.7.3/hls.min.js',
+                debug: false
+            },
             features: ['playpause','progress','current','duration','tracks','volume'],
             defaultSeekBackwardInterval: function(media) {
                 return (media.duration * 0.02);

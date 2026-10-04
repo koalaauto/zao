@@ -9,8 +9,8 @@ $.maps = (function() {
             }
 
             var api = {
-                world:    'http://zaoaoaoaoao.com/here/mapData?mode=world',
-                personal: 'http://zaoaoaoaoao.com/here/mapData?mode=personal'
+                world:    '/here/mapData?mode=world',
+                personal: '/here/mapData?mode=personal'
             };
 
             $.get(api[mode]).done(function(data) {

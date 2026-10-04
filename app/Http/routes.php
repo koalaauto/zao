@@ -44,11 +44,6 @@ Route::get('about', 'AboutController@index');
 Route::get('about/donation', 'AboutController@donationList');
 Route::get('about/contribution', 'AboutController@contributionList');
 
-// 多说评论
-Route::get('duoshuo/login', 'DuoshuoController@login');
-Route::get('duoshuo/logout', 'DuoshuoController@logout');
-Route::post('duoshuo/comment', 'DuoshuoController@comment');
-
 // 后台
 Route::group(['prefix' => 'admin','namespace' => 'Admin',
     'middleware' => ['web']], function () {

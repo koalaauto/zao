@@ -48,6 +48,26 @@ class AuthController extends Controller
     }
 
     /**
+     * 关闭后台注册
+     *
+     * @return void
+     */
+    public function getRegister()
+    {
+        abort(404);
+    }
+
+    /**
+     * 关闭后台注册
+     *
+     * @return void
+     */
+    public function postRegister()
+    {
+        abort(404);
+    }
+
+    /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
