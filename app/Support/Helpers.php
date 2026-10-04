@@ -54,7 +54,7 @@ function program_date_from_url($url) {
  */
 function qiniu_url($path) {
     return sprintf(
-        'http://%s%s',
+        '//%s%s',
         Config::get('filesystems.disks.qiniu.domain'),
         $path
     );
