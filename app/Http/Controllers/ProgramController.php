@@ -178,7 +178,11 @@ class ProgramController extends Controller
                 }*/
 
                 $audio = $group[Audio::SOURCE_DEFAULT][0];
-                $audio->url = qiniu_url($audio->url);
+                $url = $audio->url;
+                if (substr($url, -5) === '.m3u8') {
+                    $url = Config::get('filesystems.disks.qiniu.audio_prefix') . $url;
+                }
+                $audio->url = qiniu_url($url);
             }
             $audioList[] = $group->first()->first();
         }

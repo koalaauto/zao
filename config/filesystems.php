@@ -54,6 +54,8 @@ return [
             'access_key' => env('QINIU_ACCESS_KEY', ''),
             'secret_key' => env('QINIU_SECRET_KEY', ''),
             'bucket'     => env('QINIU_BUCKEY', ''),
+            // 节目 HLS 的目录前缀，例如 /lite（压缩版）；留空则用原文件
+            'audio_prefix' => env('QINIU_AUDIO_PREFIX', ''),
         ],
 
     ],
