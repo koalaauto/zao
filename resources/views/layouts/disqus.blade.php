@@ -48,7 +48,7 @@
         new iDisqus('comment', {
             forum: 'zao',
             api: '/disqus/api',
-            site: 'http://zaoaoaoaoao.com',
+            site: 'https://zaoaoaoaoao.com',
             mode: 1,
             timeout: 3000,
             init: true,
