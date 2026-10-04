@@ -21,10 +21,6 @@
         <script src="/static/module/AmaranJS/js/jquery.amaran.min.js"></script>
         <script src="/static/js/common.js"></script>
         <script src="/static/js/base.js"></script>
-        <!--[if lt IE 9]>
-            <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-            <script src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
-        <![endif]-->
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-BTP68EH1Q2"></script>
         <script>
@@ -47,7 +43,7 @@
                     <a href="{{ URL('/') }}"><i class="fa fa-home" original-title="首页"></i></a>
                     <a href="{{ URL('music') }}"><i class="fa fa-music" original-title="歌曲"></i></a>
                     <!--a href="{{ URL('program/apptoday') }}"><i class="fa fa-calendar-check-o" original-title="APP 同期节目"></i></a-->
-                    <a href="{{ URL('here') }}"><i class="fa fa-map-o" original-title="签到"></i></a>
+                    <!--a href="{{ URL('here') }}"><i class="fa fa-map-o" original-title="签到"></i></a-->
                     <a href="https://pan.baidu.com/s/11ZcPOWpNRjvGCulOdCSQJg" rel="nofollow" target="_blank"><i class="fa fa-arrow-down" original-title="下载-提取码-ZAOO"></i></a>
                     <a href="{{ URL('about') }}"><i class="fa fa-about" original-title="关于"></i></a>
                 </nav>

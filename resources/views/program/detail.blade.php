@@ -102,6 +102,6 @@
 <script src="/static/module/mediaelement-4.2.14/build/mediaelement-and-player.js"></script>
 
 <link rel="stylesheet" href="/static/css/detail.css">
-<script src="/static/js/detail.js"></script>
+<script src="/static/js/detail.js?v=20261004"></script>
 
 @endsection

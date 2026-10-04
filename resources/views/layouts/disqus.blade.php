@@ -8,6 +8,7 @@
 </style>
 
 <div id="comment"></div>
+<p style="margin-top:10px;font-size:0.8em;color:#999;">评论由 Disqus 提供，国内网络可能加载不出来，需要能访问 disqus.com 才能查看和发表评论。</p>
 <link rel="stylesheet" href="/disqus/dist/iDisqus.min.css" />
 <script src="/disqus/dist/iDisqus.min.js"></script>
 <script type="text/javascript">
@@ -46,8 +47,8 @@
         ];
         new iDisqus('comment', {
             forum: 'zao',
-            api: 'http://zaoaoaoaoao.com/disqus/api',
-            site: 'http://zaoaoaoaoao.com',
+            api: '/disqus/api',
+            site: 'https://zaoaoaoaoao.com',
             mode: 1,
             timeout: 3000,
             init: true,

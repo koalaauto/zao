@@ -9,10 +9,6 @@
     <meta name="keywords" content="飞鱼人签到地图" />
     <meta name="description" content="飞鱼人签到地图" />
     <link rel="stylesheet" href="/static/css/here.css">
-    <!--[if lt IE 9]>
-        <script src="http://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
-        <script src="http://cdn.staticfile.org/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
 </head>
 <body>
     <div id="canvas"></div>

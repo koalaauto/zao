@@ -5,6 +5,6 @@
     <title>404 - 飞鱼秀非官方回放</title>
 </head>
 <body>
-    <script type="text/javascript" src="http://www.qq.com/404/search_children.js" charset="utf-8"></script>
+    <p>页面不存在，<a href="/">回到首页</a></p>
 </body>
 </html>
